@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Приглашение • Михаил & Юлия</title>
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --text:#f5f5f7;
+      --muted:rgba(245,245,247,.78);
+      --line:rgba(255,255,255,.14);
+      --glass:rgba(0,0,0,.35);
+      --glass2:rgba(0,0,0,.22);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background: var(--bg);
+    }
+    .hero{
+      min-height: 100svh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background:
+        radial-gradient(900px 700px at 50% 0%, rgba(255,255,255,.12), transparent 60%),
+        url("bg.png");
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.04);
+      z-index:-2;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.45) 45%, rgba(0,0,0,.70));
+      z-index:-1;
+    }
+    .card{
+      width:min(980px, 100%);
+      border:1px solid var(--line);
+      border-radius:24px;
+      background: linear-gradient(180deg, var(--glass), var(--glass2));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 70px rgba(0,0,0,.45);
+      padding:22px;
+    }
+    .top{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      justify-content:space-between;
+      border-bottom:1px dashed var(--line);
+      padding-bottom:14px;
+      margin-bottom:14px;
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background:rgba(0,0,0,.25);
+      font-size:14px;
+    }
+    h1{margin:10px 0 4px;font-size:42px;letter-spacing:.2px}
+    .sub{margin:0;color:var(--muted)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+    }
+    @media (max-width:860px){
+      h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+    }
+    .block{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      background:rgba(0,0,0,.22);
+    }
+    .block h2{margin:0 0 10px;font-size:18px}
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0;
+      border-top:1px dashed rgba(255,255,255,.12);
+    }
+    .row:first-of-type{border-top:0;padding-top:0}
+    .time{font-weight:700;white-space:nowrap}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      margin:6px 6px 0 0;
+      font-size:14px;
+    }
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.16);
+      color:var(--text);
+      text-decoration:none;
+      background:rgba(255,255,255,.08);
+    }
+    a.btn:hover{background:rgba(255,255,255,.12)}
+    footer{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="card">
+      <div class="top">
+        <div>
+          <span class="badge">Открывая тебя • 19 октября 2024</span>
+          <h1>Михаил & Юлия</h1>
+          <p class="sub">Дорогие Мама и Папа! Мы бесконечно рады пригласить вас на нашу свадьбу.</p>
+        </div>
+        <div class="btns">
+          <a class="btn" target="_blank" href="https://yandex.ru/maps/?text=Иркутск%2C%20Сухэ-Батора%2C%201">Карта • Органный зал</a>
+          <a class="btn" target="_blank" href="https://yandex.ru/maps/?text=Иркутск%2C%20Якоби%2C%2035%20ресторан%20Париж">Карта • «Париж»</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="block">
+          <h2>Тайминг дня</h2>
+
+          <div class="row">
+            <div>
+              <div class="time">14:00</div>
+              <div class="muted">Сбор гостей</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="time">14:30</div>
+              <div class="muted">Церемония</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="time">15:30</div>
+              <div class="muted">Выезд в ресторан «Париж», ул. Якоби 35</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="time">16:00–17:30</div>
+              <div class="muted">Органный зал, г. Иркутск, ул. Сухэ-Батора, 1</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="time">17:30</div>
+              <div class="muted">Велком и фуршет (ресторан «Париж», 4 этаж)</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <div class="time">—</div>
+              <div class="muted">Свадебная вечеринка</div>
+            </div>
+          </div>
+
+          <p class="muted" style="margin:10px 0 0">Будьте собой и получайте наслаждение от нашего праздника ❤</p>
+        </div>
+
+        <div class="block">
+          <h2>Дресс-код</h2>
+          <div class="pill"><b>TOTAL BLACK</b></div>
+          <div class="pill">Девушкам: перья / стразы / жемчуг</div>
+          <div class="pill">Мужчинам: чёрные брюки + белая/чёрная рубашка</div>
+          <div class="pill">Чёрные классические костюмы</div>
+
+          <h2 style="margin-top:14px">Пожелания</h2>
+          <p class="muted" style="margin:0 0 10px">Подарок: будем рады вкладу в наш семейный бюджет.</p>
+          <p class="muted" style="margin:0 0 10px">Мы категорически против детей на свадьбе — это праздник для взрослых. Спасибо за понимание.</p>
+          <p class="muted" style="margin:0">Невеста любит цветы, а вместе мы любим выпить: можно букет или бутылку алкоголя с пожеланием, в какой момент её открыть.</p>
+
+          <p style="margin:14px 0 0"><b>С любовью, Михаил и Юлия</b></p>
+        </div>
+      </div>
+
+      <footer>Сайт сделан на фоне вашего PDF (bg.png). Можно добавить RSVP-форму и таймер до даты.</footer>
+    </div>
+  </section>
+</body>
+</html>
